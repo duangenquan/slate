@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Blink Camera API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -209,10 +209,9 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="https://cloud.githubusercontent.com/assets/2049665/24316082/58e34c7e-10b9-11e7-93fa-88ca46f13d46.png" class="logo" alt="58e34c7e 10b9 11e7 93fa 88ca46f13d46" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
@@ -225,275 +224,1562 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#highlighted-apis" class="toc-h1 toc-link" data-title="Highlighted APIs">Highlighted APIs</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#login" class="toc-h2 toc-link" data-title="Login">Login</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#get-network" class="toc-h2 toc-link" data-title="Get Network">Get Network</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-cameras" class="toc-h2 toc-link" data-title="Get Cameras">Get Cameras</a>
+                  </li>
+                  <li>
+                    <a href="#get-home-screen" class="toc-h2 toc-link" data-title="Get Home Screen">Get Home Screen</a>
+                  </li>
+                  <li>
+                    <a href="#download-thumbnail" class="toc-h2 toc-link" data-title="Download Thumbnail">Download Thumbnail</a>
+                  </li>
+                  <li>
+                    <a href="#get-videos" class="toc-h2 toc-link" data-title="Get Videos">Get Videos</a>
+                  </li>
+                  <li>
+                    <a href="#download-video" class="toc-h2 toc-link" data-title="Download Video">Download Video</a>
+                  </li>
+                  <li>
+                    <a href="#get-video-count" class="toc-h2 toc-link" data-title="Get Video Count">Get Video Count</a>
+                  </li>
+                  <li>
+                    <a href="#capture-thumbnail" class="toc-h2 toc-link" data-title="Capture Thumbnail">Capture Thumbnail</a>
+                  </li>
+                  <li>
+                    <a href="#capture-videos" class="toc-h2 toc-link" data-title="Capture Videos">Capture Videos</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#other-apis" class="toc-h1 toc-link" data-title="Other APIs">Other APIs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-sync-modules" class="toc-h2 toc-link" data-title="Get Sync Modules">Get Sync Modules</a>
+                  </li>
+                  <li>
+                    <a href="#enable-motion-event" class="toc-h2 toc-link" data-title="Enable Motion Event">Enable Motion Event</a>
+                  </li>
+                  <li>
+                    <a href="#disable-motion-event" class="toc-h2 toc-link" data-title="Disable Motion Event">Disable Motion Event</a>
+                  </li>
+                  <li>
+                    <a href="#get-command-status" class="toc-h2 toc-link" data-title="Get Command Status">Get Command Status</a>
+                  </li>
+                  <li>
+                    <a href="#get-events-from-sync-module" class="toc-h2 toc-link" data-title="Get Events From Sync Module">Get Events From Sync Module</a>
+                  </li>
+                  <li>
+                    <a href="#get-video-info" class="toc-h2 toc-link" data-title="Get Video Info">Get Video Info</a>
+                  </li>
+                  <li>
+                    <a href="#get-unwatched-videos" class="toc-h2 toc-link" data-title="Get Unwatched Videos">Get Unwatched Videos</a>
+                  </li>
+                  <li>
+                    <a href="#delete-video" class="toc-h2 toc-link" data-title="Delete Video">Delete Video</a>
+                  </li>
+                  <li>
+                    <a href="#delete-all-videos" class="toc-h2 toc-link" data-title="Delete All Videos">Delete All Videos</a>
+                  </li>
+                  <li>
+                    <a href="#get-one-camera" class="toc-h2 toc-link" data-title="Get One Camera">Get One Camera</a>
+                  </li>
+                  <li>
+                    <a href="#get-sensors-for-one-camera" class="toc-h2 toc-link" data-title="Get Sensors For One Camera">Get Sensors For One Camera</a>
+                  </li>
+                  <li>
+                    <a href="#get-clients" class="toc-h2 toc-link" data-title="Get Clients">Get Clients</a>
+                  </li>
+                  <li>
+                    <a href="#get-regions" class="toc-h2 toc-link" data-title="Get Regions">Get Regions</a>
+                  </li>
+                  <li>
+                    <a href="#get-system-health" class="toc-h2 toc-link" data-title="Get System Health">Get System Health</a>
+                  </li>
+                  <li>
+                    <a href="#get-program-info" class="toc-h2 toc-link" data-title="Get Program Info">Get Program Info</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#contact" class="toc-h1 toc-link" data-title="Contact">Contact</a>
           </li>
       </div>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>This is unofficial documentation for the Client API of the Blink Wire-Free HD Home Monitoring &amp; Alert System based on <a href="https://github.com/MattTW/BlinkMonitorProtocol">BlinkMonitorProtocol</a> and <a href="https://github.com/keredson/blink">Blink</a>.</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>I am not affiliated with the company in any way - this documentation is strictly &quot;AS-IS&quot;. My goal was to uncover enough to arm and disarm the system programatically so that I can issue those commands in sync with my home alarm system arm/disarm. Just some raw notes at this point but should be enough for creating programmatic APIs. Lots more to be discovered and documented - feel free to contribute!</p>
+<h1 id='highlighted-apis'>Highlighted APIs</h1><h2 id='login'>Login</h2>
+<p>Client login to the Blink Servers.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Request:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://rest.prod.immedia-semi.com/login <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
+  -d <span class="s1">'email=youremail&amp;password=yourpassword&amp;client_specifier=%22iPhone%209.2%20%7C%202.2%20%7C%20222%22'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.prod.immedia-semi.com/login"</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s">"email=youremail&amp;password=yourpassword&amp;client_specifier=</span><span class="si">%22</span><span class="s">iPhone</span><span class="si">%209.2%20%7</span><span class="s">C</span><span class="si">%202.2%20%7</span><span class="s">C</span><span class="si">%20222%22</span><span class="s">"</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'Host'</span><span class="p">:</span> <span class="s">"rest.prod.immedia-semi.com"</span><span class="p">,</span>
+    <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">"application/x-www-form-urlencoded"</span><span class="p">,</span>
+    <span class="p">}</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.prod.immedia-semi.com/login"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"Host"</span><span class="p">:</span> <span class="s2">"rest.prod.immedia-semi.com"</span><span class="p">,</span>
+    <span class="s2">"Content-Type"</span><span class="p">:</span> <span class="s2">"application/x-www-form-urlencoded"</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"youremail"</span><span class="p">,</span>
+    <span class="s2">"password"</span><span class="p">:</span> <span class="s2">"yourpassword"</span><span class="p">,</span>
+    <span class="s2">"client_specifier"</span><span class="p">:</span> <span class="s2">"\"iPhone 9.2 | 2.2 | 222\""</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Sample response:</p>
 </blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"authtoken"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"authtoken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yourauthtoken"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"networks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"networkid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"onboarded"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"yourregion"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST https://rest.prod.immedia-semi.com/login</code></p>
+
+<p><strong>HEADERS</strong></p>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/x-www-form-urlencoded</td>
+</tr>
+</tbody></table>
+
+<p><strong>Body Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>email</td>
+<td>Your Email</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>password</td>
+<td>Your Password</td>
+</tr>
+<tr>
+<td>client_specifier</td>
+<td>Client Name</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<p><strong>Response</strong>
+JSON response containing information including AuthToken, Network ID and Region.</p>
+
+<aside class="notice">
+<code>yourauthtoken</code> and <code>yourregion</code> are passed in a header in future calls.
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='get-network'>Get Network</h2>
+<p>Obtain information about the Blink networks defined for the logged in user.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/networks <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/networks"</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourtoken}}"</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/networks"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourtoken}"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample response:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"summary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"yournetworkid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"onboarded"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"networks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">yournetworkid</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"network_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"network_origin"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"locale"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"dst"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"ping_interval"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"encryption_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"armed"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"autoarm_geo_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"autoarm_time_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lv_mode"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_channel"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"video_destination"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"storage_used"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"storage_total"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"video_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"video_history_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"arm_string"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"busy"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"camera_error"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"sync_module_error"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"feature_plan_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<p><strong>HTTP Request</strong></p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p><code>GET https://rest.{{yourregion}}.immedia-semi.com/networks</code></p>
+
+<p><strong>HEADERS</strong></p>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Description</th>
+<th>Default</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<aside class="notice">
+<code>yournetworkid</code> value might be used in some future calls.
+</aside>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p><strong>Response</strong> 
+JSON response containing network information.</p>
+<h2 id='get-cameras'>Get Cameras</h2>
+<p>Obtain cameras information for users.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/cameras <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/cameras"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourtoken}}"</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/cameras"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourtoken}"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample response:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"devicestatus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">yourcameraid</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"wifi_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_voltage"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temperature"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"fw_version"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"mac"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"ipv"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"ip_address"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"error_codes"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_alert_status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_alert_status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"ac_power"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"light_sensor_ch0"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"light_sensor_ch1"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"light_sensor_data_valid"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"light_sensor_data_new"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"time_first_video"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"time_108_boot"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"time_wlan_connect"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"time_dhcp_lease"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"time_dns_resolve"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_108_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"total_108_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_tb_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"total_tb_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"wifi_connect_failure_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"dhcp_failure_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"socket_failure_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"dev_1"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"dev_2"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"dev_3"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"unit_number"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"serial"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"camera_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"mac_address"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"liveview_enabled"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"siren_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"siren_volume"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"onboarded"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"motion_sensitivity"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"alert_tone_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"alert_tone_volume"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"alert_repeat"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"alert_interval"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"video_length"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_alarm_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_interval"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_adjust"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_min"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_max"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_hysteresis"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"illuminator_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"illuminator_duration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"illuminator_intensity"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_alarm_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_voltage_interval"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_voltage_threshold"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_voltage_hysteresis"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"last_battery_alert"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_alert_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_sync_interval"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"video_50_60hz"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"invert_image"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"flip_image"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"record_audio_enable"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"clip_rate"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"liveview_rate"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"max_resolution"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"auto_test"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"wifi_timeout"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"retry_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"a1"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"last_temp_alert"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_alert_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"last_wifi_alert"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"wifi_alert_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"last_lfr_alert"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_alert_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"last_offline_alert"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"offline_alert_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp_alert_state"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_state"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_check_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"motion_regions"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/cameras</code></p>
+
+<p><strong>HEADERS</strong></p>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Description</th>
+<th>Default</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
 
-<p>The Kittn API uses the following error codes:</p>
+<p><strong>Response</strong> 
+JSON response containing camera information.</p>
+
+<aside class="notice">
+<code>yourcameraid</code> value might be used in some future calls.
+</aside>
+<h2 id='get-home-screen'>Get Home Screen</h2>
+<p>Return information displayed on the home screen of the mobile client.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/homescreen <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/homescreen"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourtoken}}"</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/homescreen"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourtoken}"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"network"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"wifi_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"armed"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"warning"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"enable_temp_alerts"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"error_msg"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"device_type"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"warning"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"error_msg"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"armed"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"wifi_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"temp"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"battery_state"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"usage_rate"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"device_type"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"warning"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"error_msg"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"last_hb"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET https://rest.{{yourregion}}.immedia-semi.com/homescreen</code></p>
+
+<p><strong>HEADERS</strong></p>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Default</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
 </tr>
 </tbody></table>
+
+<p><strong>Response</strong>
+JSON response containing information that the mobile client displays on the home page, including: status, armed state, links to thumbnails for each camera, etc.</p>
+<h2 id='download-thumbnail'>Download Thumbnail</h2>
+<p>Download the thumbnail for a camera.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/<span class="o">{{</span>yourthumbnail<span class="o">}}</span>.jpg <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/{{yourthumbnail}}.jpg"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourtoken}}"</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/{{yourthumbnail}}.jpg"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourtoken}"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET https://rest.{{yourregion}}.immedia-semi.com/{{yourthumbnail}}.jpg</code></p>
+
+<p><strong>HEADERS</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<p><strong>Response</strong>
+Thumbnail binary data. </p>
+<h2 id='get-videos'>Get Videos</h2>
+<p>Gets a paginated set of video information.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/api/v2/videos/page/<span class="o">{{</span>pagenumber<span class="o">}}</span> <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/api/v2/videos/page/{{pagenumber}}"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourtoken}}"</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/api/v2/videos/page/{{pagenumber}}"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourtoken}"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+
+<p>A list of video clips in json format, with 10 videos in one page.</p>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">yourvideoid</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"camera_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"upload_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"viewed"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"locked"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"ready"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"encryption"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"encryption_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"storage_location"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yourthumbnail"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yourvideo"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"partial"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET https://rest.{{yourregion}}.immedia-semi.com/api/v2/videos/page/{{pagenumber}}</code></p>
+
+<p><strong>HEADERS</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<p><strong>Response</strong> 
+JSON response containing a set of video information, including: camera name, creation time, thumbnail URI, size, length.</p>
+
+<aside class="notice">
+If <code>pagenumber</code> is 0, you will retrieve some latest video clips.
+
+If <code>pagenumber</code> is larger than 0, you will retrieve some earlier video clips.
+</aside>
+<h2 id='download-video'>Download Video</h2>
+<p>Download one video clip.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/<span class="o">{{</span>yourvideo<span class="o">}}</span> <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/{{yourvideo}}"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourtoken}}"</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/{{yourvideo}}"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourtoken}"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET https://rest.{{yourregion}}.immedia-semi.com/{{yourvideo}}</code></p>
+
+<p><strong>HEADERS</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<p><strong>Response</strong>
+Video binary data.</p>
+<h2 id='get-video-count'>Get Video Count</h2>
+<p>Get total number of videos.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/api/v2/videos/count <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/api/v2/videos/count"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourtoken}}"</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/api/v2/videos/count"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourtoken}"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET https://rest.{{yourregion}}.immedia-semi.com/api/v2/videos/count</code></p>
+
+<p><strong>HEADERS</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<p><strong>Response</strong> 
+JSON response containing the total video count.</p>
+<h2 id='capture-thumbnail'>Capture Thumbnail</h2>
+<p>Capture camera thumbnails.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/camera/<span class="o">{{</span>yourcameraid<span class="o">}}</span>/thumbnail <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/camera/{{yourcameraid}}/thumbnail"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourauthtoken}}"</span>    
+<span class="p">}</span>
+
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/camera/{{yourcameraid}}/thumbnail"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourauthtoken}}"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"execute_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_stage"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_rest"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_db"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_sent"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_sm"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_dev"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_is"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_lv"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_vs"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_condition"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sm_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"lfr_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"attempts"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"player_transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"server"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"by_whom"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"diagnostic"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"parent_command_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"siren_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"firmware_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/camera/{{yourcameraid}}/thumbnail</code></p>
+
+<p><strong>HEADERS</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<p><strong>Response</strong> 
+Command information.</p>
+<h2 id='capture-videos'>Capture Videos</h2>
+<p>Capture new camera videos.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/camera/<span class="o">{{</span>yourcameraid<span class="o">}}</span>/clip <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/camera/{{yourcameraid}}/clip"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'TOKEN_AUTH'</span><span class="p">:</span> <span class="s">"{{yourauthtoken}}"</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"async"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"crossDomain"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/camera/{{yourcameraid}}/clip"</span><span class="p">,</span>
+  <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="s2">"headers"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"TOKEN_AUTH"</span><span class="p">:</span> <span class="s2">"{{yourauthtoken}}"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"execute_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_stage"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_rest"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_db"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_sent"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_sm"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_dev"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_is"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_lv"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_vs"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_condition"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sm_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"lfr_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"attempts"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"player_transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"server"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"by_whom"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"diagnostic"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"parent_command_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"siren_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"firmware_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST https://rest.{{yourregion}}.immedia-semi.com/network/{{yournetworkid}}/camera/{{yourcameraid}}/clip</code></p>
+
+<p><strong>HEADERS</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TOKEN_AUTH</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<p><strong>Response</strong> 
+Command information.</p>
+<h1 id='other-apis'>Other APIs</h1><h2 id='get-sync-modules'>Get Sync Modules</h2>
+<p>Obtain information about the Blink Sync Modules on the given network.   </p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/syncmodules <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing information about the known state of the Sync module, most notably if it is online</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"syncmodule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">yourcommandid</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"fw_version"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"mac_address"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"ip_address"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"lfr_frequency"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"serial"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"onboarded"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"server"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"last_hb"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"os_version"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"last_wifi_alert"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"wifi_alert_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"last_offline_alert"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"offline_alert_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"table_update_sequence"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"feature_plan_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"wifi_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='enable-motion-event'>Enable Motion Event</h2>
+<p>Start recording/reporting motion events.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/arm <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing information about the arm command request, including the command/request ID.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">yourcommandid</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"execute_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_stage"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_rest"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_db"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_sent"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_sm"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_dev"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_is"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_lv"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_vs"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_condition"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sm_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"lfr_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"attempts"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"player_transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"server"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"by_whom"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"diagnostic"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"parent_command_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"siren_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"firmware_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='disable-motion-event'>Disable Motion Event</h2>
+<p>Stop recording/reporting motion events.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/disarm <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing information about the disarm command request, including the command/request ID</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">yourcommandid</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"execute_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_stage"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_rest"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_db"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_cs_sent"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_sm"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_dev"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_is"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_lv"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"stage_vs"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"state_condition"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sm_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"lfr_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"attempts"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"player_transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"server"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"by_whom"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"diagnostic"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"parent_command_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"siren_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"firmware_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-command-status'>Get Command Status</h2>
+<p>Get status info on the given command.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/command/<span class="o">{{</span>yourcommandid<span class="o">}}</span> <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing state information of the given command, most notably whether it has completed and was successful.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"complete"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"status_msg"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"status_code"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"commands"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"execute_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"state_stage"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_rest"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_cs_db"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_cs_sent"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_sm"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_dev"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_is"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_lv"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"stage_vs"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"state_condition"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"sm_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"lfr_ack"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"attempts"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"player_transaction"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"server"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"by_whom"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"diagnostic"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"parent_command_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"siren_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"firmware_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-events-from-sync-module'>Get Events From Sync Module</h2>
+<p>Get events for a given network (sync module).</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/events/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/ <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> A json list of evets incluing URL&#39;s. Replace the &quot;mp4&quot; with &quot;jpg&quot; extension to get the thumbnail of each clip</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"event"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"notified"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"command_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"siren_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"syncmodule"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"camera"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"siren"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"account"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-video-info'>Get Video Info</h2>
+<p>Gets information for a specific video by ID.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/api/v2/video/<span class="o">{{</span>yourvideoid<span class="o">}}</span> <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing video information.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"camera_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"upload_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"viewed"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"locked"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"ready"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"encryption"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"encryption_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"storage_location"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"partial"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h2 id='get-unwatched-videos'>Get Unwatched Videos</h2>
+<p>Gets a list of unwatched videos.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/api/v2/videos/unwatched/page/0 <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing unwatched video information.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"camera_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"upload_time"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"viewed"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"locked"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"ready"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"encryption"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"encryption_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"storage_location"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"partial"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h2 id='delete-video'>Delete Video</h2>
+<p>Delete a video by ID</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://rest.prd2.immedia-semi.com/api/v2/video/<span class="o">{{</span>yourvideoid<span class="o">}}</span>/delete <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> Json response with message and code.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='delete-all-videos'>Delete All Videos</h2>
+<p>NOT TESTED.</p>
+<pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Host: prod.immedia-semi.com"</span> -H <span class="s2">"TOKEN_AUTH: authtoken from login"</span> --data-binary --compressed https://prod.immedia-semi.com/api/v2/videos/deleteall
+</code></pre><h2 id='get-one-camera'>Get One Camera</h2>
+<p>Gets information for one camera.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/camera/<span class="o">{{</span>yourcameraid<span class="o">}}</span> <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing camera information.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"camera_status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"camera_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"wifi_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"lfr_strength"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"battery_voltage"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"temperature"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"fw_version"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"mac"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"ipv"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"ip_address"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"error_codes"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"battery_alert_status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"temp_alert_status"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"ac_power"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"light_sensor_ch0"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"light_sensor_ch1"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"light_sensor_data_valid"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"light_sensor_data_new"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_first_video"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_108_boot"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_wlan_connect"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_dhcp_lease"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"time_dns_resolve"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"lfr_108_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"total_108_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"lfr_tb_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"total_tb_wakeups"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"wifi_connect_failure_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"dhcp_failure_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"socket_failure_count"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"dev_1"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"dev_2"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"dev_3"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"unit_number"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"serial"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"sync_module_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-sensors-for-one-camera'>Get Sensors For One Camera</h2>
+<p>Gets camera sensor information.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/network/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/camera/<span class="o">{{</span>yourcameraid<span class="o">}}</span>/signals <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing camera sensor information, such as wifi strength, temperature, and battery level.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"lfr"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"wifi"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"temp"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"battery"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-clients'>Get Clients</h2>
+<p>Gets information about devices that have connected to the blink service.    </p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/account/clients <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing client information, including: type, name, connection time, user ID.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"clients"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"notify_sound"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"client_type"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"client_specifier"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"notification_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"aws_key"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"os_version"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"device_identifier"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"app_version"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"unique_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"home"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-regions'>Get Regions</h2>
+<p>Gets information about supported regions.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.prod.immedia-semi.com/regions <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p><strong>Response</strong> JSON response containing region information.</p>
+
+<blockquote>
+<p>Sample response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"preferred"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+    </span><span class="s2">"regions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"us"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"dns"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"friendly_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"registration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"eu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"dns"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"friendly_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"registration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"au"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"dns"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"friendly_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"registration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"sg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"dns"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"friendly_name"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+            </span><span class="s2">"registration"</span><span class="p">:</span><span class="w"> </span><span class="err">xxx</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-system-health'>Get System Health</h2>
+<p>Gets information about system health.   </p>
+
+<aside class="notice">NOT WORKING!</aside>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.prod.immedia-semi.com/health <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p>Response: Unknown</p>
+<h2 id='get-program-info'>Get Program Info</h2>
+<p>Gets information about programs</p>
+
+<aside class="notice">NO RESPONSE!</aside>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://rest.<span class="o">{{</span>yourregion<span class="o">}}</span>.immedia-semi.com/api/v1/networks/<span class="o">{{</span>yournetworkid<span class="o">}}</span>/programs <span class="se">\</span>
+  -H <span class="s1">'TOKEN_AUTH: {{yourauthtoken}}'</span>
+</code></pre>
+<p>Response: Unknown</p>
+<h1 id='contact'>Contact</h1>
+<p>duangenquan@gmail.com</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
                 <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
